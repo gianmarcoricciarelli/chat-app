@@ -1,26 +1,26 @@
 import '@emotion/react';
 
+export type TTextColors =
+    | 'paleViolet'
+    | 'moderateViolet'
+    | 'desaturatedDarkViolet'
+    | 'grayishBlue'
+    | 'veryDarkDesaturatedViolet'
+    | 'darkGrayishViolet';
+type TGradientColors = 'lightMagenta' | 'lightViolet';
+type TSecondaryColors =
+    | 'white'
+    | 'lightGrayishViolet'
+    | 'veryDarkDesaturatedViolet'
+    | 'veryLightMagenta';
+type THslDefinition = `hsl(${number}, ${number}%, ${number}%)`;
+
 declare module '@emotion/react' {
     export interface Theme {
         colors: {
-            text: {
-                paleViolet: string;
-                moderateViolet: string;
-                desaturatedDarkViolet: string;
-                grayishBlue: string;
-                veryDarkDesaturatedViolet: string;
-                darkGrayishViolet: string;
-            };
-            gradients: {
-                lightMagenta: string;
-                lightViolet: string;
-            };
-            secondary: {
-                white: string;
-                lightGrayishViolet: string;
-                veryDarkDesaturatedViolet: string;
-                veryLightMagenta: string;
-            };
+            text: Record<TTextColors, THslDefinition>;
+            gradients: Record<TGradientColors, THslDefinition>;
+            secondary: Record<TSecondaryColors, THslDefinition>;
         };
     }
 }

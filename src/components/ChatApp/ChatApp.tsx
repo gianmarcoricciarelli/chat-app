@@ -13,7 +13,7 @@ export const ChatApp: FC = () => {
                 width: '100dvw',
             }}
         >
-            <Label />
+            <Label color="paleViolet">hello</Label>
         </div>
     );
 };
