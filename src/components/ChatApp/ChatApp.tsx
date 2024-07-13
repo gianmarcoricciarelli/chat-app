@@ -30,12 +30,15 @@ export const ChatApp: FC = () => {
                 >
                     Simple booking
                 </Label>
-                <Label color="darkGrayishViolet">
-                    Stay in touch with out dog walkers through the chat
-                    interface. This makes it easy to discuss arrangements and
-                    make bookings. Once the walk has been completed you can rate
-                    your walker and book again all through the chat.
-                </Label>
+                <Container width="80%">
+                    <Label color="darkGrayishViolet">
+                        Stay in touch with out dog walkers through the chat
+                        interface. This makes it easy to discuss arrangements
+                        and make bookings. Once the walk has been completed you
+                        can rate your walker and book again all through the
+                        chat.
+                    </Label>
+                </Container>
             </Container>
         </Container>
     );
