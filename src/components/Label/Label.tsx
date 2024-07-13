@@ -1,4 +1,4 @@
-import { TTextColors } from '../types/theme';
+import { TTextColors } from '../../types/theme';
 import { css, useTheme } from '@emotion/react';
 import { FC, PropsWithChildren } from 'react';
 
