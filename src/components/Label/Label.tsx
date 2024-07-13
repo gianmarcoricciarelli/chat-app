@@ -3,6 +3,7 @@ import { css, useTheme } from '@emotion/react';
 import { FC, PropsWithChildren } from 'react';
 
 interface ILabel {
+    Component?: 'p' | 'h1';
     fontWeight?: 'regular' | 'semi-bold' | 'bold';
     color: TTextColors;
 }
@@ -14,11 +15,12 @@ const fontWeightMap = {
 };
 
 const staticLabelStyles = css`
-    font-family: 'Rubik, sans-serif';
+    font-family: Rubik, sans-serif;
     font-optical-sizing: auto;
 `;
 
 export const Label: FC<PropsWithChildren<ILabel>> = ({
+    Component = 'p',
     fontWeight = 'regular',
     color,
     children,
@@ -26,7 +28,7 @@ export const Label: FC<PropsWithChildren<ILabel>> = ({
     const theme = useTheme();
 
     return (
-        <p
+        <Component
             css={css`
                 ${staticLabelStyles}
                 color: ${theme.colors.text[color]};
@@ -34,6 +36,6 @@ export const Label: FC<PropsWithChildren<ILabel>> = ({
             `}
         >
             {children}
-        </p>
+        </Component>
     );
 };
